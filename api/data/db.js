@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var dburl = 'mongodb://localhost:27017/hotel-data';
+var dburl = 'mongodb://localhost:27017/ecommerce';
 
 mongoose.connect(dburl);
 
@@ -22,4 +22,6 @@ process.on('SIGINT',function(){
 });
 
 //Bring in Schema and MOdels
-require('./hotels.models');
+require('./account.model');
+require('./inventory.model');
+require('./order.model');
